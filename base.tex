@@ -1,0 +1,175 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[pdftex,top=1.5cm,left=0.8cm,right=1cm,bottom=1.5cm,head=10pt,foot=10pt]{geometry}
+
+\newcommand{\estudiante}[5]{
+  \begin{tabular}{rrp{0.5\textwidth}rr}
+    Comisión: & \huge{\textbf{#3}} & & Nota: & \textbf{#5}
+  \end{tabular}
+
+  \vspace{0.2cm}
+
+  \begin{tabular}{rrrr}
+    Estudiante: & \textbf{#1} & DNI: & #2
+  \end{tabular}
+
+  \vspace{0.1cm}
+  
+  \begin{tabular}{rr}
+    Corrigió: & \textbf{#4}
+  \end{tabular}
+
+  \vspace{0.1cm}
+}
+
+\newcommand{\fila}[2]{#1 & \textbf{#2} \\ \hline}
+
+\newcommand{\subtareas}[5]{
+  \vspace{0.2cm}
+  \textbf{Subtareas} \vspace{0.1cm}
+
+  \begin{tabular}{|p{0.75\textwidth}|c|}
+    \hline
+    \fila{¿Expresa correctamente la estrategia con subtareas?}{#1}
+    \fila{¿Detecta subtareas que permiten escalar mejor el código?}{#2}
+    \fila{¿Evita definir subtareas que solo son renombre de otras o de operaciones simples?}{#3}
+    \fila{¿Define y usa adecuadamente subtareas de representación o primitivas?}{#4}
+  \end{tabular}
+  
+  \begin{tabular}{|p{0.8\textwidth}|}
+    Otras observaciones sobre subtareas: #5 \\
+    \hline
+  \end{tabular}
+}
+
+\newcommand{\contratos}[4]{
+  \vspace{0.2cm}
+  \textbf{Contratos} \vspace{0.1cm}
+
+  \begin{tabular}{|p{0.75\textwidth}|c|}
+    \hline
+    \fila{¿Escribe correctamente el propósito de los contratos?}{#1}
+    \fila{¿Escribe correctamente los tipos de parámetros y las funciones que define?}{#2}
+    \fila{¿Escribe correctamente las precondiciones?}{#3}
+  \end{tabular}
+  
+  \begin{tabular}{|p{0.8\textwidth}|}
+    Otras observaciones sobre contratos: #4 \\
+    \hline
+  \end{tabular}
+}
+
+\newcommand{\parametros}[4]{
+  \vspace{0.2cm}
+  \textbf{Parámetros} \vspace{0.1cm}
+
+  \begin{tabular}{|p{0.75\textwidth}|c|}
+    \hline
+    \fila{¿Define subtareas usando parámetros para hacerlas generales cuando amerita?}{#1}
+    \fila{¿Mantiene concordancia entre parámetros y argumentos, respetando cantidad, orden y tipos?}{#2}
+    \fila{¿Evita cometer errores groseros, como usar expresiones en la definición de parámetros o romper el alcance de los mismos?}{#3}
+  \end{tabular}
+  
+  \begin{tabular}{|p{0.8\textwidth}|}
+    Otras observaciones sobre parámetros: #4 \\
+    \hline
+  \end{tabular}
+}
+
+\newcommand{\herramientas}[7]{
+  \vspace{0.2cm}
+  \textbf{Herramientas} \vspace{0.1cm}
+
+  \begin{tabular}{|p{0.75\textwidth}|c|}
+    \hline
+    \fila{¿Utiliza adecuadamente expresiones y comandos?}{#1}
+    \fila{¿Evita errores de tipos?}{#2}
+    \fila{¿Utiliza correctamente los booleanos, sin expresar miedo al booleano?}{#3}
+    \fila{¿Evita el uso de programación defensiva, respetando lo establecido en las precondiciones?}{#4}
+    \fila{¿Utiliza solo las variables necesarias para resolver el problema y no adicionales?}{#5}
+    \fila{¿Distingue dónde utilizar cada herramienta de forma adecuada?}{#6}
+  \end{tabular}
+  
+  \begin{tabular}{|p{0.8\textwidth}|}
+    Otras observaciones sobre herramientas: #7 \\
+    \hline
+  \end{tabular}
+}
+
+\newcommand{\sintaxis}[5]{
+  \vspace{0.2cm}
+  \textbf{Sintaxis y Estilo} \vspace{0.1cm}
+
+  \begin{tabular}{|p{0.65\textwidth}|c|}
+    \hline
+    \fila{¿Elige nombres adecuados (verbos para comandos, sustantivos para expresiones)?}{#1}
+    \fila{¿Los nombres reflejan claramente el propósito e intencionalidad?}{#2}
+    \fila{¿Respeta la indentación?}{#3}
+    \fila{¿Respeta la sintaxis del lenguaje (mayúsculas/minúsculas/llaves/paréntesis/etc.)?}{#4}
+  \end{tabular}
+  
+  \begin{tabular}{|p{0.7\textwidth}|}
+    Otras observaciones sobre sintaxis y estilo: #5 \\
+    \hline
+  \end{tabular}
+}
+
+\newcommand{\recorridos}[8]{
+  \vspace{0.2cm}
+  \textbf{Recorridos} \vspace{0.1cm}
+
+  \begin{tabular}{|p{0.65\textwidth}|c|}
+    \hline
+    \fila{¿Elige adecuadamente el esquema de recorrido y elementos a recorrer en cada problema?}{#1}
+    \fila{¿Realiza adecuadamente recorridos de transformación?}{#2}
+    \fila{¿Realiza adecuadamente recorridos de búsqueda?}{#3}
+    \fila{¿Realiza adecuadamente recorridos de acumulación?}{#4}
+    \fila{¿Realiza adecuadamente recorridos de máximo-mínimo?}{#5}
+    \fila{¿Recorre adecuadamente las celdas del tablero?}{#6}
+    \fila{¿Recorre adecuadamente tipos enumerativos?}{#7}
+  \end{tabular}
+  
+  \begin{tabular}{|p{0.7\textwidth}|}
+    Otras observaciones sobre recorridos: #8 \\
+    \hline
+  \end{tabular}
+}
+
+\newcommand{\ejercicio}[5]{
+  \vspace{0.2cm}
+  \textbf{Ejercicio #1} \vspace{0.1cm}
+
+  \begin{tabular}{|p{0.65\textwidth}|c|}
+    \hline
+    \fila{¿Plantea una estrategia que resuelve  adecuadamente el problema?}{#2}
+    \fila{¿Realiza todas las partes de dicha estrategia?}{#3}
+    \fila{¿La solución describe efectivamente la transformación esperada?}{#4}
+  \end{tabular}
+  
+  \begin{tabular}{|p{0.7\textwidth}|}
+    Otras observaciones sobre ejercicio #1: #5 \\
+    \hline
+  \end{tabular}
+}
+
+\newcommand{\ejercicioTres}[3]{
+  \vspace{0.2cm}
+  \textbf{Ejercicio 3} \vspace{0.1cm}
+
+  \begin{tabular}{|p{0.65\textwidth}|c|}
+    \hline
+    \fila{¿Responde correctamente a la pregunta?}{#1}
+    \fila{¿Justifica adecuadamente su respuesta?}{#2}
+  \end{tabular}
+  
+  \begin{tabular}{|p{0.7\textwidth}|}
+    Otras observaciones sobre ejercicio 3: #3 \\
+    \hline
+  \end{tabular}
+}
+
+\begin{document}
+\pagenumbering{gobble}
+\input{rubricas}
+\end{document}
