@@ -1,0 +1,128 @@
+\newcommand{\wid}{0.75\textwidth}
+\newcommand{\wide}{0.68\textwidth}
+\newcommand{\widc}{0.87\textwidth}
+
+\newcommand{\estudiante}[8]{
+  \begin{tabular}{rrp{0.03\textwidth}rrp{0.03\textwidth}rr}
+    Comisión: & \huge{\textbf{#4}} & & Estudiante: & \textbf{#1}, \textbf{#2} & & DNI: & #3
+  \end{tabular}
+
+  \vspace{0.3cm}
+  
+  \begin{tabular}{rrp{0.03\textwidth}rrp{0.03\textwidth}rr}
+    Corrigió: & \textbf{#5} & & Porcentaje realizado: \textbf{#7} aprox. & Nivel general: \textbf{#8} & & Nota: & \textbf{#6}
+  \end{tabular}
+
+  \vspace{0.6cm}
+}
+
+\newcommand{\subtareas}[6]{
+  \vspace{0.2cm}
+
+  \begin{tabular}{|p{\wid}|c|}
+    \hline
+    \fila{\textbf{Subtareas}}{#6}
+    \fila{S1. ¿Detecta la necesidad de subtareas y las plantea?}{#1}
+    \fila{S2. ¿Evita anidar código por no realizar o detectar subtareas?}{#2}
+    \fila{S3. ¿Evita definir renombres innecesarios?}{#3}
+    \fila{S4. ¿Define y usa adecuadamente sub. de representación y primitivas?}{#4}
+    \fila{S5. ¿Reutiliza adecuadamente operaciones de la biblioteca?}{#5}
+  \end{tabular}
+}
+
+\newcommand{\contratos}[5]{
+  \vspace{0.2cm}
+
+  \begin{tabular}{|p{\wid}|c|}
+    \hline
+    \fila{\textbf{Contratos}}{#5}
+    \fila{C1. ¿Escribe correctamente el propósito de los contratos?}{#1}
+    \fila{C2. ¿Escribe correctamente los tipos?}{#2}
+    \fila{C3. ¿Escribe correctamente las precondiciones?}{#3}
+    \fila{C4. ¿Respeta las precondiciones al momento de invocar operaciones, evitando prácticas como programación defensiva?}{#4}
+  \end{tabular}
+}
+
+\newcommand{\parametros}[5]{
+  \vspace{0.2cm}
+
+  \begin{tabular}{|p{\wid}|c|}
+    \hline
+    \fila{\textbf{Parámetros}}{#5}
+    \fila{P1. ¿Define subtareas usando parámetros para hacerlas generales cuando amerita?}{#1}
+    \fila{P2. ¿Usa siempre parámetros que están definidos y en alcance?}{#2}
+    \fila{P3. ¿Mantiene concordancia entre argumentos y los parámetros definidos, respetando cantidad, orden y tipos?}{#3}
+    \fila{P4. ¿Evita cometer otros errores groseros, como usar expresiones en la definición de parámetros?}{#4}
+  \end{tabular}
+}
+
+\newcommand{\herramientas}[6]{
+  \vspace{0.2cm}
+
+  \begin{tabular}{|p{\wid}|c|}
+    \hline
+    \fila{\textbf{Herramientas}}{#6}
+    \fila{H1. ¿Utiliza adecuadamente expresiones y comandos?}{#1}
+    \fila{H2. ¿Evita errores de tipos?}{#2}
+    \fila{H3. ¿Utiliza correctamente los booleanos, sin expresar miedo al booleano?}{#3}
+    \fila{H4. ¿Utiliza solo las variables necesarias para resolver el problema y no adicionales?}{#4}
+    \fila{H5. ¿Distingue dónde utilizar cada herramienta de forma adecuada?}{#5}
+  \end{tabular}
+}
+
+\newcommand{\estilo}[5]{
+  \vspace{0.2cm}
+
+  \begin{tabular}{|p{\wid}|c|}
+    \hline
+    \fila{\textbf{Estilo y Sintaxis}}{#5}
+    \fila{E1. ¿Elige nombres adecuados en su estructura (verbos para comandos, sustantivos para expresiones)?}{#1}
+    \fila{E2. ¿Los nombres son representativos en propósito e intencionalidad y siguen las convenciones de la materia?}{#2}
+    \fila{E3. ¿Respeta la indentación?}{#3}
+    \fila{E4. ¿Respeta la sintaxis del lenguaje (mayúsculas/minúsculas/llaves/paréntesis/etc.)?}{#4}
+  \end{tabular}
+}
+
+\newcommand{\recorridos}[5]{
+  \vspace{0.2cm}
+
+  \begin{tabular}{|p{\wid}|c|}
+    \hline
+    \fila{\textbf{Recorridos}}{#5}
+    \fila{R1. ¿Identifica los lugares en los que corresponde un recorrido?}{#1}
+    \fila{R2. ¿Elige adecuadamente el esquema de recorrido a utilizar?}{#2}
+    \fila{R3. ¿Plantea adecuadamente todas las partes de los esquemas que usa?}{#3}
+    \fila{R4. ¿Identifica adecuadamente los elementos a recorrer?}{#4}
+  \end{tabular}
+}
+
+\newcommand{\ejercicio}[3]{
+  \vspace{0.2cm}
+  \textbf{Ejercicio #1} (Práctico) \vspace{0.1cm}
+
+  \begin{tabular}{|p{\wide}|p{0.15\textwidth}|}
+    \hline
+    \fila{Porcentaje de ej. realizado}{#2}
+    \fila{Nivel de corrección del código}{#3}
+  \end{tabular}
+  
+  \begin{tabular}{|p{\widc}|}
+    Otras observaciones sobre ejercicio #1:  \\
+    \hline
+  \end{tabular}
+}
+
+\newcommand{\ejercicioTres}[1]{
+  \vspace{0.2cm}
+  \textbf{Ejercicio 3} (Teoría) \vspace{0.1cm}
+
+  \begin{tabular}{|p{\wide}|p{0.15\textwidth}|}
+    \hline
+    \fila{Nivel de la respuesta y justificación}{#1}
+  \end{tabular}
+  
+  \begin{tabular}{|p{\widc}|}
+    Otras observaciones sobre ejercicio 3:  \\
+    \hline
+  \end{tabular}
+}
